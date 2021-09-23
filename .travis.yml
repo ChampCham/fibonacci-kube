@@ -14,8 +14,8 @@ before_install:
   - gcloud components update kubectl
   - gcloud auth activate-service-account --key-file service-account.json
   - gcloud config set project fibonacci-kube-326904
-  - gcloud config set compute/zone asia-east1-a
-  - gcloud container clusters get-credentials cluster-1
+  - gcloud config set compute/zone asia-southeast1-a
+  - gcloud container clusters get-credentials cluster-2
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker build -t champchamchamp/react-test -f ./client/Dockerfile.dev ./client
 
