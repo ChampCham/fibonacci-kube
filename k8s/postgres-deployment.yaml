@@ -25,6 +25,8 @@ spec:
                 secretKeyRef:
                   name: pgpassword
                   key: PGPASSWORD
+            - name: POSTGRES_DB
+              value: postgres
           ports:
           - containerPort: 5432
           volumeMounts:
